@@ -44,8 +44,8 @@ const web = document.getElementById('image-res');
 const mobile = document.getElementById('mobile-image');
 const imageCode=        `<div id="product-picture" class="product-picture">
                             <div id="imageOwnDiv" class="imageOwnDiv">
-                                <img class="product-image" src="images/green-shirt.jpg" alt="">
-                                <img class="product-image" src="images/green-unfold.jpg" alt="">
+                                <img class="product-image" src="images/shirt.jpg" alt="">
+                                <img class="product-image" src="images/shirt back.jpg" alt="">
                             </div>   
                             <div class="shift">
                                 <i id="left" class="fa fa-angle-left"></i>

@@ -33,66 +33,66 @@ movePixRight.addEventListener('click',()=>{changePicture('R')});
 
 if(OnDisplayNow===""){
 pictureList[movementTracker].style.display='block';
-OnDisplayNow = "green";
+OnDisplayNow = "VineyardNavy";
 }
-else if(OnDisplayNow==="green"){loadGreenShirt();pictureList[movementTracker].style.display='block';
+else if(OnDisplayNow==="VineyardNavy"){loadVineyardNavyShirt();pictureList[movementTracker].style.display='block';
 }
-else{loadBlueShirt();pictureList[movementTracker].style.display='block';
+else{loadFrostShirt();pictureList[movementTracker].style.display='block';
 }
 
 
 
-GreenShirt={                                                      //greenshirt product object
-    banner:"Classic Fit Solid Shirt",
-    images:['images/green-shirt.jpg','images/green-unfold.jpg','green-worn.jpg','green-worn2.jpg'],
-    price:"95",
+VineyardNavyShirt={                                                      
+    banner:"Harbor Fleece Shep Shirt",
+    images:['images/shirt.jpg','images/shirt back.jpg'],
+    price:"150",
     className:"product-image",
-    productInfo: "Color: Surplus Green",
-    color:"#8a9591"
+    productInfo: "Color: VineyardNavy",
+    color:"#273248"
 }
-BlueShirt={                                                      //blueshirt product object
-    banner:"Classic Fit Solid Shirt",
-    price:"120",
-    images:['images/blue-shirt.jpg', 'images/blue-unfold.jpg'],
+FrostShirt={                                                      
+    banner:"Harbor Fleece Shep Shirt",
+    price:"200",
+    images:['images/frost shirt.jpg', 'images/frost shirt back.jpg'],
     className: "product-image",
-    productInfo: "Color: Blue Blazer" ,
-    color:"#485b7c" 
+    productInfo: "Color: Frost" ,
+    color:"#e6e5e0" 
 }
-let loadGreenShirt=()=>{                                        //greenshirt loader function
+let loadVineyardNavyShirt=()=>{                                        
    
     deleteCurrentImages("product-image");
-    for(let i=GreenShirt.images.length; i>=0;i--){
+    for(let i=VineyardNavyShirt.images.length; i>=0;i--){
     let newImage=document.createElement("img");
-    newImage.src=GreenShirt.images[i];
-    newImage.className=GreenShirt.className;
+    newImage.src=VineyardNavyShirt.images[i];
+    newImage.className=VineyardNavyShirt.className;
     imageParentDiv.insertBefore(newImage,pictureList[0])
     }
     pictureList[movementTracker].style.display='block';
-    productName.innerHTML = GreenShirt.banner;
-    productPrice.innerHTML = GreenShirt.price;
-    colorDescription.innerHTML = GreenShirt.productInfo;
-    OnDisplayNow = "green";
+    productName.innerHTML = VineyardNavyShirt.banner;
+    productPrice.innerHTML = VineyardNavyShirt.price;
+    colorDescription.innerHTML = VineyardNavyShirt.productInfo;
+    OnDisplayNow = "VineyardNavy";
 }
 
-let loadBlueShirt=()=>{                                      //blueshirt loader function
-    console.log('blue');
+let loadFrostShirt=()=>{                                      
+    console.log('Frost');
     deleteCurrentImages("product-image");
-    for(let i=BlueShirt.images.length-1; i>=0;i--){
+    for(let i=FrostShirt.images.length-1; i>=0;i--){
     let newImage=document.createElement("img");
-    newImage.src=BlueShirt.images[i];
-    newImage.className=GreenShirt.className;
+    newImage.src=FrostShirt.images[i];
+    newImage.className=VineyardNavyShirt.className;
     console.log(newImage);
     imageParentDiv.insertBefore(newImage,pictureList[0])
     }
     pictureList[movementTracker].style.display='block';
-    productName.innerHTML = BlueShirt.banner;
-    productPrice.innerHTML = BlueShirt.price;
-    colorDescription.innerHTML = BlueShirt.productInfo;
-    OnDisplayNow = "blue";
+    productName.innerHTML = FrostShirt.banner;
+    productPrice.innerHTML = FrostShirt.price;
+    colorDescription.innerHTML = FrostShirt.productInfo;
+    OnDisplayNow = "Frost";
 }
 
-colorBtn1.addEventListener("click",(e)=>{  loadGreenShirt();}); // trigger on the color choice events
-colorBtn2.addEventListener("click",(e)=>{ loadBlueShirt();});
+colorBtn1.addEventListener("click",(e)=>{  loadVineyardNavyShirt();}); // trigger on the color choice events
+colorBtn2.addEventListener("click",(e)=>{ loadFrostShirt();});
 
 let deleteCurrentImages=(imageClassName)=>{
     const elements = document.getElementsByClassName(imageClassName);
@@ -144,7 +144,7 @@ const sizehandler=()=>{
     document.querySelectorAll('div.size').forEach(element => {  //control for the selection of sizes
         element.addEventListener('click', (e)=>{
            document.querySelectorAll('div.size').forEach(element=>{ element.style.border='none'});
-           e.target.style.border='solid 1px blue'
+           e.target.style.border='solid 1px Frost'
            sizeInfo= e.target.innerText
         })
     });
@@ -254,11 +254,11 @@ function orderHandler(){
 
     function imageLink(){             // image display
         let theUrl;
-        if(OnDisplayNow==='green'){
-            theUrl=GreenShirt.images[1];
+        if(OnDisplayNow==='VineyardNavy'){
+            theUrl=VineyardNavyShirt.images[1];
         }
         else{
-            theUrl=BlueShirt.images[1];
+            theUrl=FrostShirt.images[1];
         }
         return theUrl;
     }
