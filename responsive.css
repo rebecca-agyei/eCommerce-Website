@@ -28,14 +28,13 @@ display: none;
     top: 0px;
     width: 100%;
     color: azure;
-   
     height: auto;
     min-height: 40px;
     text-align: center;
 }
 .header-text{
     padding: 12px;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .lower-header{
