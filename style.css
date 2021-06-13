@@ -1,12 +1,16 @@
+body{
+    background-color: #F5FEFD;
+}
+
 *{
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
     overflow-x: hidden;
 }
+
 .pop_up{
     display: none;
 }
-
 
 .banner{
     top: 0px; 

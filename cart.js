@@ -32,12 +32,6 @@ for(let i=1; i <= +quantitySoFar; i++ ){
 return subTotal;       
 }
 
-
-
-
-
-//Delete Handler !!!!!!
-
 function remove(itemName){
 idToRemove=itemName.getAttribute('id');
 toRemove = document.getElementById(idToRemove);
@@ -85,11 +79,6 @@ localStorage.setItem("new_order", JSON.stringify(new_order));
 
 createCartObjects()
 }
-
-
-
-
-//code to regenerate cart object below!!!!!!!!!
 
 let createCartObjects=()=>{
 
