@@ -384,6 +384,16 @@ display: none;
         margin-left: 1vw;
     }
 
+    .social-icons {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        margin-top: 70px;
+      }
+
     .social-icons>i{
         width: 2rem;
         height: 2rem ;
@@ -392,8 +402,8 @@ display: none;
         border: solid 1px gray;
         border-radius: 50%;
         padding: 5px;
-        white-space: nowrap;
-        margin: 1.2vw;
+        margin: 1.8vw;
+        display: block;
     }
     
 .more-info{
