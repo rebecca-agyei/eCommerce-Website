@@ -44,7 +44,7 @@ else{loadFrostShirt();pictureList[movementTracker].style.display='block';
 
 VineyardNavyShirt={                                                      
     banner:"Harbor Fleece Shep Shirt",
-    images:['images/shirt.jpg','images/shirt back.jpg'],
+    images:['../images/shirt.jpg','../images/shirt back.jpg'],
     price:"150",
     className:"product-image",
     productInfo: "Color: VineyardNavy",
@@ -53,7 +53,7 @@ VineyardNavyShirt={
 FrostShirt={                                                      
     banner:"Harbor Fleece Shep Shirt",
     price:"200",
-    images:['images/frost shirt.jpg', 'images/frost shirt back.jpg'],
+    images:['../images/frost shirt.jpg', '../images/frost shirt back.jpg'],
     className: "product-image",
     productInfo: "Color: Frost" ,
     color:"#e6e5e0" 
@@ -303,10 +303,10 @@ mediaQueryList.addEventListener('change', event => {
     console.log(window.innerWidth);
   if (event.matches) {
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','responsive.css');
+    style.setAttribute('href','/css/responsive.css');
   } else {
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','style.css');  
+    style.setAttribute('href','/css/style.css');  
   }
 })
 

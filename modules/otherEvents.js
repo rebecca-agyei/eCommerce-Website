@@ -44,8 +44,8 @@ const web = document.getElementById('image-res');
 const mobile = document.getElementById('mobile-image');
 const imageCode=        `<div id="product-picture" class="product-picture">
                             <div id="imageOwnDiv" class="imageOwnDiv">
-                                <img class="product-image" src="images/shirt.jpg" alt="">
-                                <img class="product-image" src="images/shirt back.jpg" alt="">
+                                <img class="product-image" src="../images/shirt.jpg" alt="">
+                                <img class="product-image" src="../images/shirt back.jpg" alt="">
                             </div>   
                             <div class="shift">
                                 <i id="left" class="fa fa-angle-left"></i>
@@ -60,13 +60,13 @@ function myFunction(x) {
     console.log('fired ')
     let savedLink=mobile.innerHTML;
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','responsive.css')
+    style.setAttribute('href','/css/responsive.css')
     web.innerHTML = imageCode;
     mobile.removeChild(mobile.lastChild)
     
   } else {console.log('not')
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','style.css')
+    style.setAttribute('href','/css/style.css')
     mobile.innerHTML = imageCode;
     web.removeChild(web.lastChild)
   }
@@ -84,11 +84,11 @@ function myFunction(e) {       //media Query function
     if (e.matches) { // If
       console.log('fired ')
       const style = document.getElementById('mainstyle');
-      style.setAttribute('href','responsive.css');
+      style.setAttribute('href','/css/responsive.css');
       
     } else {console.log('not')
       const style = document.getElementById('mainstyle');
-      style.setAttribute('href','style.css')
+      style.setAttribute('href','/css/style.css')
       mobile.innerHTML = imageCode;
       web.removeChild(web.lastChild)
     }
@@ -100,11 +100,11 @@ mediaQueryList.addEventListener('change', event => {
     console.log(window.innerWidth);
   if (event.matches) {
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','responsive.css');
+    style.setAttribute('href','/css/responsive.css');
     webview.appendChild(mobileview.removeChild(mobileview.firstChild))
   } else {
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','style.css')
+    style.setAttribute('href','/css/style.css')
     webview.appendChild(webview.removeChild(webview.firstChild))
    
   }
@@ -114,11 +114,11 @@ mediaQueryList.addEventListener('change', event => {
     console.log(window.innerWidth);
   if (event.matches) {
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','responsive.css');
+    style.setAttribute('href','/css/responsive.css');
     webview.appendChild(mobileview.removeChild(mobileview.firstChild));
   } else {
     const style = document.getElementById('mainstyle');
-    style.setAttribute('href','style.css');
+    style.setAttribute('href','/css/style.css');
      mobileview.appendChild(webview.removeChild(webview.firstChild));
    
   }
